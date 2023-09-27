@@ -1,6 +1,0 @@
-name: KingdomEconomy
-version: '${version}'
-main: me.giverplay.kingdomeconomy.KingdomEconomy
-authors: [ GiverPlay ]
-description: A economy plugins
-website: https://giverplay.me
