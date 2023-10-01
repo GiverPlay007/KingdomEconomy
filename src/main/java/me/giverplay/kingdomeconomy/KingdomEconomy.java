@@ -1,6 +1,7 @@
 package me.giverplay.kingdomeconomy;
 
 import com.mojang.logging.LogUtils;
+import me.giverplay.kingdomeconomy.registry.KingdomEconomyItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,8 +19,10 @@ public class KingdomEconomy {
   private static final Logger LOGGER = LogUtils.getLogger();
 
   public KingdomEconomy() {
-    IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-    modEventBus.addListener(this::commonSetup);
+    IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    eventBus.addListener(this::commonSetup);
+
+    KingdomEconomyItems.register(eventBus);
 
     MinecraftForge.EVENT_BUS.register(this);
   }

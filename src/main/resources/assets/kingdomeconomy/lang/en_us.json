@@ -1,0 +1,17 @@
+{
+  "item.kingdomeconomy.one_coin": "¢1 Coin",
+  "item.kingdomeconomy.five_coin": "¢5 Coin",
+  "item.kingdomeconomy.ten_coin": "¢10 Coin",
+  "item.kingdomeconomy.twenty_five_coin": "¢25 Coin",
+  "item.kingdomeconomy.fifty_coin": "¢50 Coin",
+
+  "item.kingdomeconomy.one_bill": "$1 Bill",
+  "item.kingdomeconomy.two_bill": "$2 Bill",
+  "item.kingdomeconomy.five_bill": "$5 Bill",
+  "item.kingdomeconomy.ten_bill": "$10 Bill",
+  "item.kingdomeconomy.twenty_bill": "$20 Bill",
+  "item.kingdomeconomy.fifty_bill": "$50 Bill",
+  "item.kingdomeconomy.one_hundred_bill": "$100 Bill",
+
+  "itemGroup.kingdomEconomyTab": "Kingdom Economy"
+}
