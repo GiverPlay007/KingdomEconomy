@@ -1,6 +1,7 @@
 package me.giverplay.kingdomeconomy;
 
 import com.mojang.logging.LogUtils;
+import me.giverplay.kingdomeconomy.registry.KingdomEconomyBlocks;
 import me.giverplay.kingdomeconomy.registry.KingdomEconomyItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -23,6 +24,7 @@ public class KingdomEconomy {
     eventBus.addListener(this::commonSetup);
 
     KingdomEconomyItems.register(eventBus);
+    KingdomEconomyBlocks.register(eventBus);
 
     MinecraftForge.EVENT_BUS.register(this);
   }
