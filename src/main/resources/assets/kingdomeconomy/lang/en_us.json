@@ -15,5 +15,7 @@
 
   "itemGroup.kingdomEconomyTab": "Kingdom Economy",
 
-  "block.kingdomeconomy.atm": "ATM"
+  "block.kingdomeconomy.atm": "ATM",
+
+  "gui.kingdomeconomy.atm": "ATM"
 }

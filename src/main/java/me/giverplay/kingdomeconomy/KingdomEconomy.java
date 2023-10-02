@@ -1,8 +1,12 @@
 package me.giverplay.kingdomeconomy;
 
 import com.mojang.logging.LogUtils;
+import me.giverplay.kingdomeconomy.registry.KingdomEconomyBlockEntities;
 import me.giverplay.kingdomeconomy.registry.KingdomEconomyBlocks;
 import me.giverplay.kingdomeconomy.registry.KingdomEconomyItems;
+import me.giverplay.kingdomeconomy.registry.KingdomEconomyMenuTypes;
+import me.giverplay.kingdomeconomy.screen.ATMScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +29,8 @@ public class KingdomEconomy {
 
     KingdomEconomyItems.register(eventBus);
     KingdomEconomyBlocks.register(eventBus);
+    KingdomEconomyBlockEntities.register(eventBus);
+    KingdomEconomyMenuTypes.register(eventBus);
 
     MinecraftForge.EVENT_BUS.register(this);
   }
@@ -37,6 +43,7 @@ public class KingdomEconomy {
   public static class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
+      MenuScreens.register(KingdomEconomyMenuTypes.ATM_MENU.get(), ATMScreen::new);
     }
   }
 }
